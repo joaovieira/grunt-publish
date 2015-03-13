@@ -1,7 +1,7 @@
 {
   "name": "grunt-publish",
   "description": "Automatically publish to NPM registry one or more modules",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/maxleiko/grunt-publish",
   "author": {
     "name": "Maxime Tricoire",
@@ -39,7 +39,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "async": "^0.2.10",
-    "npm": "^1.4.4"
+    "async": "^0.9.0",
+    "npm": "^2.7.0"
   }
 }

@@ -82,6 +82,33 @@ publish: {
 
 Will publish your module to the specified registry instead of registry.npmjs.org. If `options.registry` isn't specified, `https://registry.npmjs.org` is used.
 
+#### options.auth
+Type: `Object`
+Default value: `{}` (empty object)
+
+Details of npm account to be used for publishing.
+The auth field must provide `username`, `password` and `email` values.
+If present, will authenticate before each module is published.
+If not present, will try to publish with currently authenticated user.
+
+Example:
+
+```js
+publish: {
+  options: {
+    auth: {
+      username: process.env.NPM_USERNAME,
+      password: process.env.NPM_PASSWORD,
+      email: process.env.NPM_EMAIL
+    }
+  },
+  main: {
+    src: ...
+  }
+}
+```
+
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
